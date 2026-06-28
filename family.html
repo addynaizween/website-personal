@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>TAKE A PEEK INSIDE</title>
+
+	<style>
+		
+	     
+	     {
+	     	margin: 0;
+	     	padding: 0;
+	     	box-sizing: border-box;
+	     	font-family: "Georgia", serif;
+	     }
+
+	     body {
+	     	 min-height: 100vh;
+	     	 background: border-radius(circle at center, #FFF3D0, #000000);
+	     	 color: hotpink;
+
+	     }
+
+	     .navbar {
+	     	position: absolute;
+	     	top: 40px;
+	     	left: 60px;
+	     	right: 60px;
+	     	display: flex;
+	     	justify-content: space-between;
+	     	align-items: center;
+	     	font-size: 14px;
+	     	letter-spacing: 2px;
+	     }
+
+	     .navbar a {
+	     	color: lightpink;
+	     	text-decoration: none;
+	     	margin-left: 25px;
+	     }
+
+	     .hero {
+	     	min-height: 100vh;
+	     	display: flex;
+	     	justify-content: center;
+	     	align-items: center;
+	    	padding: 0 60px;
+         }
+
+         .hero-content {
+         	display: flex;
+         	align-items: center;
+         	gap: 80px;
+         	max-width: 1200px;
+         	width: 100%;
+         }
+
+         .hero-image {
+         	flex: 1;
+         	max-width: 360px;
+         }
+
+         .hero-image img {
+         	width: 100%;
+         	height: auto;
+         	border-radius: 22px;
+         	object-fit: cover;
+         	box-shadow: 0 25px 60 px rgba(0, 0, 0, 0.5);
+         }
+
+         .hero-text {
+         	flex: 1;
+         	max-width: 600px;
+         	text-align: left;
+         }
+
+         .hero-text h2 {
+         	letter-spacing: 2px;
+         	font-size: 14px;
+         	opacity: 0.8;
+         }
+
+         .hero-text h1 { 
+             font-size: 76px;
+             margin: 20px 0;
+             line-height:1.05;
+         }
+
+         .hero-text p {
+         	font-size: 14px;
+         	line-height: 1.8;
+         	opacity: 0.85;
+         	margin-bottom: 35px;
+         }
+
+         .hero-text a.button {
+         	display: inline-block;
+         	padding: 12px 34px;
+         	border: 1px solid white;
+         	border-radius: 30px;
+         	color: lightpink;
+         	text-decoration: none;
+         	letter-spacing: 2px;
+         	font-size: 12px;
+         	transition: 0.3s;
+         }
+
+         .hero-text a.button:bover {
+         	background: white;
+         	color: black;
+         }
+
+         .hero-text {
+         	text-align: center;
+         }
+      
+</style>
+</head>
+
+<body>
+	
+	<div class="navbar">
+
+		  <div class="menu">
+   	    	<a href="selfintro.html">ABOUT ME</a>
+   	    	<a href="family.html">GALLERY</a>
+   	    	<a href="edupage.html">EDUCATION</a>
+   	    	<a href="expage.html">EXPERIENCE</a>
+   	    	<a href="contactme.html">CONTACT</a>
+   	    </div>
+   </div>
+
+<div class="gallery-section">
+	<br></br>
+	<br></br>
+<h1> My Gallery </h1>
+<p> Moments with family, friends and my beloved pets</p>
+</div>
+
+<div class="gallery-section">
+	<h2> Family </h2>
+	<div class="slider-wrapper">
+		<button class="arrow left" onclick="slide('family', -1)"> </button>
+		<div class="slider" id="family">
+			<img src="family.jpg">
+</div>
+<button class="arrow right" onclick="slide('family", 1>" </button>
+</div>
+</div>
+
+<div class="gallery-section">
+	<h2>Friends</h2>
+	<div class="slider-wrapper">
+		<button class="arrow left" onclick="slide('friends', -1)"> </button>
+		<div class="slider" id="friends">
+			<img src="friends.jpg">
+		</div>
+		<button class="arrow right" onclick="slide('friends', 1)"> </button>
+	</div>
+</div>
+
+
+<div class="gallery-section">
+	<h2> PETS </h2>
+	<div class="slider-wrapper">
+		<button class="arrow left" onclick="slide('pets', -1)"></button>
+		<div class="slider" id="pets">
+			<img src="mochi.jpg">
+		</div>
+		<button class="arrow right" onclick="slide('pets', 1)"> </button>
+	</div>
+
+	<script>
+		function slide(id, direction) {
+			const slider = document.getElementById(id);
+			slider.scrollLeft += direction * 300;
+	}
+</script>
+
+</body>
+</html>
